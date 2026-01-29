@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HAIHub</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png"> 
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="./assets/js/ui.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header id="header">
+        <div class="inner">
+            <h1><a href="/"><img src="./assets/images/logo.svg" alt="HAIhub"></a></h1>
+            <div class="header-util">
+                <nav id="nav">
+                    <ul class="nav-list">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="https://healthhub.kr/">Company</a></li>
+                        <li><a href="https://healthhub.kr/main/?mc_code=1611">Contact</a></li>
+                        <li><a href="https://market.dicomlink.kr/login">Login</a></li>
+                        <li><a class="sign-up" href="https://market.dicomlink.kr/join">Sign Up</a></li>
+                    </ul>
+                </nav>
+                <div class="lang">
+                    <button type="button" class="btn-lang">
+                        <img src="./assets/images/icon_lang.svg" alt="language">
+                    </button>
+                    <div class="lang-depth">
+                        <ul>
+                            <li><a href="https://healthhub.kr/main/">한국어</a></li>
+                            <li><a href="https://healthhub.kr/en_main/">English</a></li>
+                            <li><a href="https://healthhub.kr/jp_main/">日本語</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="button" class="btn-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+     <!-- aside -->
+    <aside>
+        <nav id="m-nav">
+            <ul class="nav-list">
+                <li><a href="/">Home</a></li>
+                <li><a href="https://healthhub.kr/">Company</a></li>
+                <li><a href="https://healthhub.kr/main/?mc_code=1611">Contact</a></li>
+                <li><a href="https://market.dicomlink.kr/login">Login</a></li>
+                <li><a class="sign-up" href="https://market.dicomlink.kr/join">Sign Up</a></li>
+            </ul>
+        </nav>
+    </aside>
+     <!-- //aside -->
+     <!-- content -->
+    <main id="content">
+        <article>
+            <section class="main-content">
+                <section class="hero">
+                    <div class="inner">
+                        <strong class="title">H<span>A</span><span>I</span>Hub <br>Radiology <br><span>A</span><span>I</span> Marketplace</strong>
+                        <div class="float-items">
+                            <div class="float-item item-1">
+                                <strong>Imaging modalities</strong>
+                                <ul>
+                                    <li>DX</li>
+                                    <li>CR</li>
+                                    <li>CT</li>
+                                    <li>MG</li>
+                                    <li>MR</li>
+                                    <li>DR</li>
+                                </ul>
+                            </div>
+                            <div class="float-item item-2">
+                                <strong>Body Parts</strong>
+                                <ul>
+                                    <li>Chest</li>
+                                    <li>Hand</li>
+                                    <li>Mommo</li>
+                                    <li>Breast</li>
+                                    <li>Brain</li>
+                                    <li>Brain Angio</li>
+                                    <li>Head</li>
+                                    <li>Scanogram</li>
+                                    <li>Foot</li>
+                                    <li>Leg</li>
+                                    <li>Pelvis</li>
+                                    <li>Spine</li>
+                                </ul>
+                            </div>
+                            <div class="float-item item-3">
+                                <strong>Vendors</strong>
+                                <p>Powered by the World’s Top AI Vendors</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="main-demo">
+                    <div class="inner">
+                        <em data-aos="fade-up">H<span>AI</span>Hub  <i>l</i>  <span>HealthHub AI Hub</span></em>
+                        <p data-aos="fade-up" class="desc">Effortless Access to a Variety of Radiology AI Solutions, <br>Seamlessly Integrated into Our PACS.</p>
+                        <div data-aos="fade-up">
+                            <a href="https://healthhub.kr/main/?mc_code=1611" class="btn-demo"><span>Request a Demo</span></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="portfolio">
+                    <div class="inner">
+                        <ul class="filter-wrap" data-aos="fade-up">
+                            <li class="search">
+                                <div class="row">
+                                    <input type="text" name="productName" id="productName" placeholder="Search">
+                                    <button type="submit"><img src="./assets/images/icon-search.svg" alt="Search"></button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="select-wrap">
+                                        <select name="modality" id="modality">
+                                            <option value="Modality">Modality</option>
+                                            <option value="">All</option>
+                                            <option value="P201">CT</option>
+                                            <option value="P202">MG</option>
+                                            <option value="P203">DX</option>
+                                            <option value="P204">CR</option>
+                                            <option value="P206">MR</option>
+                                            <option value="P205">ALL</option>
+                                            <option value="P207">DR</option>
+                                            <option value="P208">US</option>
+                                        </select>
+                                        <label for="modality">
+                                            <img src="./assets/images/icon-down.svg" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="select-wrap">
+                                        <select name="bodypart" id="bodypart">
+                                            <option value="Body Part">Body Part</option>
+                                            <option value="">All</option>
+                                            <option value="P001">Chest</option>
+                                            <option value="P002">HAND</option>
+                                            <option value="P003">Left Hand</option>
+                                            <option value="P004">Mommo</option>
+                                            <option value="P005">Breast</option>
+                                            <option value="P006">Brain</option>
+                                            <option value="P007">Brain Angio</option>
+                                            <option value="P008">Head</option>
+                                            <option value="P009">Scanography</option>
+                                            <option value="P010">Scanogram</option>
+                                            <option value="P011">Leg</option>
+                                            <option value="P012">ALL</option>
+                                            <option value="P013">PELVIS</option>
+                                            <option value="P014">Foot</option>
+                                            <option value="P015">Feet</option>
+                                            <option value="P016">SPINE</option>
+                                        </select>
+                                        <label for="bodypart">
+                                            <img src="./assets/images/icon-down.svg" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="select-wrap">
+                                        <select name="vendor" id="vendor">
+                                            <option value="Vendor">Vendor</option>
+                                            <option value="">All</option>
+                                            <option value="Lunit">Lunit</option>
+                                            <option value="Monitor">Monitor</option>
+                                            <option value="Healthhub">Healthhub</option>
+                                            <option value="Neurophet">Neurophet</option>
+                                        </select>
+                                        <label for="vendor">
+                                            <img src="./assets/images/icon-down.svg" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="item-list" data-aos="fade-up">
+                            <li class="item">
+                                <a href="./productDetails.html">
+                                    <div class="item-header">
+                                        <div class="thumb">
+                                            <div class="bg" style="background-image: url(./assets/images/item_thumb.png);"></div>
+                                        </div>
+                                        <div class="name">
+                                            <strong class="title">Lunit INSIGHT CXR</strong>
+                                            <p class="summary">Lunit INSIGHT CXR은 흉부 엑스레이 영상을 분석하여 다양한 이상 소견을 검출하는 인공지능 솔루션입니다. </p>
+                                        </div>
+                                    </div>
+                                    <div class="item-body">
+                                        <ul class="item-info">
+                                            <li class="modality">
+                                                <strong class="th">Modality</strong>
+                                                <p class="td">DX</p>
+                                            </li>
+                                            <li class="body">
+                                                <strong class="th">Body Part</strong>
+                                                <p class="td">AVIEW LCS Plus</p>
+                                            </li>
+                                            <li class="application">
+                                                <strong class="th">Application</strong>
+                                                <p class="td">Lung Nodules</p>
+                                            </li>
+                                            <li class="company">
+                                                <strong class="th">Company</strong>
+                                                <p class="td">Coreline Soft</p>
+                                            </li>
+                                        </ul>
+                                        <div class="body-btm row">
+                                            <ul class="badge-list">
+                                                <li class="modality">DX</li>
+                                                <li class="body">Chest</li>
+                                            </ul>
+                                            <ul class="tag-list">
+                                                <li><i></i><span>FDA (US)</span></li>
+                                                <li><i></i><span>MFDS (KR)</span></li>
+                                                <li><i></i><span>CE</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="./productDetails.html">
+                                    <div class="item-header">
+                                        <div class="thumb">
+                                            <div class="bg" style="background-image: url(./assets/images/item_thumb.png);"></div>
+                                        </div>
+                                        <div class="name">
+                                            <strong class="title">Lunit INSIGHT CXR</strong>
+                                            <p class="summary">Lunit INSIGHT CXR은 흉부 엑스레이 영상을 분석하여 다양한 이상 소견을 검출하는 인공지능 솔루션입니다. </p>
+                                        </div>
+                                    </div>
+                                    <div class="item-body">
+                                        <ul class="item-info">
+                                            <li class="modality">
+                                                <strong class="th">Modality</strong>
+                                                <p class="td">DX</p>
+                                            </li>
+                                            <li class="body">
+                                                <strong class="th">Body Part</strong>
+                                                <p class="td">AVIEW LCS Plus</p>
+                                            </li>
+                                            <li class="application">
+                                                <strong class="th">Application</strong>
+                                                <p class="td">Lung Nodules</p>
+                                            </li>
+                                            <li class="company">
+                                                <strong class="th">Company</strong>
+                                                <p class="td">Coreline Soft</p>
+                                            </li>
+                                        </ul>
+                                        <div class="body-btm row">
+                                            <ul class="badge-list">
+                                                <li class="modality">DX</li>
+                                                <li class="body">Chest</li>
+                                            </ul>
+                                            <ul class="tag-list">
+                                                <li><i></i><span>FDA (US)</span></li>
+                                                <li><i></i><span>MFDS (KR)</span></li>
+                                                <li><i></i><span>CE</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="./productDetails.html">
+                                    <div class="item-header">
+                                        <div class="thumb">
+                                            <div class="bg" style="background-image: url(./assets/images/item_thumb.png);"></div>
+                                        </div>
+                                        <div class="name">
+                                            <strong class="title">Lunit INSIGHT CXR</strong>
+                                            <p class="summary">Lunit INSIGHT CXR은 흉부 엑스레이 영상을 분석하여 다양한 이상 소견을 검출하는 인공지능 솔루션입니다. </p>
+                                        </div>
+                                    </div>
+                                    <div class="item-body">
+                                        <ul class="item-info">
+                                            <li class="modality">
+                                                <strong class="th">Modality</strong>
+                                                <p class="td">DX</p>
+                                            </li>
+                                            <li class="body">
+                                                <strong class="th">Body Part</strong>
+                                                <p class="td">AVIEW LCS Plus</p>
+                                            </li>
+                                            <li class="application">
+                                                <strong class="th">Application</strong>
+                                                <p class="td">Lung Nodules</p>
+                                            </li>
+                                            <li class="company">
+                                                <strong class="th">Company</strong>
+                                                <p class="td">Coreline Soft</p>
+                                            </li>
+                                        </ul>
+                                        <div class="body-btm row">
+                                            <ul class="badge-list">
+                                                <li class="modality">DX</li>
+                                                <li class="body">Chest</li>
+                                            </ul>
+                                            <ul class="tag-list">
+                                                <li><i></i><span>FDA (US)</span></li>
+                                                <li><i></i><span>MFDS (KR)</span></li>
+                                                <li><i></i><span>CE</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="./productDetails.html">
+                                    <div class="item-header">
+                                        <div class="thumb">
+                                            <div class="bg" style="background-image: url(./assets/images/item_thumb.png);"></div>
+                                        </div>
+                                        <div class="name">
+                                            <strong class="title">Lunit INSIGHT CXR</strong>
+                                            <p class="summary">Lunit INSIGHT CXR은 흉부 엑스레이 영상을 분석하여 다양한 이상 소견을 검출하는 인공지능 솔루션입니다. </p>
+                                        </div>
+                                    </div>
+                                    <div class="item-body">
+                                        <ul class="item-info">
+                                            <li class="modality">
+                                                <strong class="th">Modality</strong>
+                                                <p class="td">DX</p>
+                                            </li>
+                                            <li class="body">
+                                                <strong class="th">Body Part</strong>
+                                                <p class="td">AVIEW LCS Plus</p>
+                                            </li>
+                                            <li class="application">
+                                                <strong class="th">Application</strong>
+                                                <p class="td">Lung Nodules</p>
+                                            </li>
+                                            <li class="company">
+                                                <strong class="th">Company</strong>
+                                                <p class="td">Coreline Soft</p>
+                                            </li>
+                                        </ul>
+                                        <div class="body-btm row">
+                                            <ul class="badge-list">
+                                                <li class="modality">DX</li>
+                                                <li class="body">Chest</li>
+                                            </ul>
+                                            <ul class="tag-list">
+                                                <li><i></i><span>FDA (US)</span></li>
+                                                <li><i></i><span>MFDS (KR)</span></li>
+                                                <li><i></i><span>CE</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="./productDetails.html">
+                                    <div class="item-header">
+                                        <div class="thumb">
+                                            <div class="bg" style="background-image: url(./assets/images/item_thumb.png);"></div>
+                                        </div>
+                                        <div class="name">
+                                            <strong class="title">Lunit INSIGHT CXR</strong>
+                                            <p class="summary">Lunit INSIGHT CXR은 흉부 엑스레이 영상을 분석하여 다양한 이상 소견을 검출하는 인공지능 솔루션입니다. </p>
+                                        </div>
+                                    </div>
+                                    <div class="item-body">
+                                        <ul class="item-info">
+                                            <li class="modality">
+                                                <strong class="th">Modality</strong>
+                                                <p class="td">DX</p>
+                                            </li>
+                                            <li class="body">
+                                                <strong class="th">Body Part</strong>
+                                                <p class="td">AVIEW LCS Plus</p>
+                                            </li>
+                                            <li class="application">
+                                                <strong class="th">Application</strong>
+                                                <p class="td">Lung Nodules</p>
+                                            </li>
+                                            <li class="company">
+                                                <strong class="th">Company</strong>
+                                                <p class="td">Coreline Soft</p>
+                                            </li>
+                                        </ul>
+                                        <div class="body-btm row">
+                                            <ul class="badge-list">
+                                                <li class="modality">DX</li>
+                                                <li class="body">Chest</li>
+                                            </ul>
+                                            <ul class="tag-list">
+                                                <li><i></i><span>FDA (US)</span></li>
+                                                <li><i></i><span>MFDS (KR)</span></li>
+                                                <li><i></i><span>CE</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="./productDetails.html">
+                                    <div class="item-header">
+                                        <div class="thumb">
+                                            <div class="bg" style="background-image: url(./assets/images/item_thumb.png);"></div>
+                                        </div>
+                                        <div class="name">
+                                            <strong class="title">Lunit INSIGHT CXR</strong>
+                                            <p class="summary">Lunit INSIGHT CXR은 흉부 엑스레이 영상을 분석하여 다양한 이상 소견을 검출하는 인공지능 솔루션입니다. </p>
+                                        </div>
+                                    </div>
+                                    <div class="item-body">
+                                        <ul class="item-info">
+                                            <li class="modality">
+                                                <strong class="th">Modality</strong>
+                                                <p class="td">DX</p>
+                                            </li>
+                                            <li class="body">
+                                                <strong class="th">Body Part</strong>
+                                                <p class="td">AVIEW LCS Plus</p>
+                                            </li>
+                                            <li class="application">
+                                                <strong class="th">Application</strong>
+                                                <p class="td">Lung Nodules</p>
+                                            </li>
+                                            <li class="company">
+                                                <strong class="th">Company</strong>
+                                                <p class="td">Coreline Soft</p>
+                                            </li>
+                                        </ul>
+                                        <div class="body-btm row">
+                                            <ul class="badge-list">
+                                                <li class="modality">DX</li>
+                                                <li class="body">Chest</li>
+                                            </ul>
+                                            <ul class="tag-list">
+                                                <li><i></i><span>FDA (US)</span></li>
+                                                <li><i></i><span>MFDS (KR)</span></li>
+                                                <li><i></i><span>CE</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                          
+                        </ul>
+                    </div>
+                </section>
+            </section>
+            <section class="main-features">
+                <div class="inner">
+                    <div class="section-header">
+                        <h2 class="title" data-aos="fade-up">KEY FEATURES</h2>
+                    </div>
+                    <div class="section-content">
+                        <p class="feature-desc" data-aos="fade-up">
+                            Streamline radiology workflows with seamless PACS integration, enabling one-click <br>
+                            AI evaluation. Enhance diagnosis, make well-informed decisions, and optimize any <br>
+                                clinical practice with advanced AI solutions.
+                        </p>
+                        <ul class="feature-list">
+                            <li data-aos="fade-up">
+                                <div class="feature-item">
+                                    <strong>Diverse <br>AI Specialties</strong>
+                                    <p>Access a variety of AI <br>solutions tailored to different <br>radiology specialties as you <br>need.</p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-up">
+                                <div class="feature-item">
+                                    <strong>One-Click <br>Evaluation</strong>
+                                    <p>Effortless one-click requests <br>and AI results are <br>seamlessly integrated into <br>our PACS.</p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-up">
+                                <div class="feature-item">
+                                    <strong>Streamlined <br>Workflow</strong>
+                                    <p>Simplify your workflow from <br>testing to installation and <br>billing. Empower yourself <br>with our solutions</p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-up">
+                                <div class="feature-item">
+                                    <strong>Embedded <br>AI Results</strong>
+                                    <p>AI results can be easily <br>utilized by being embedded <br>as text directly into your <br>dictation.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="main-partners">
+                <div class="inner">
+                    <div class="section-header">
+                        <h2 class="title" data-aos="fade-up">For AI Partners</h2>
+                        <p class="hsacn-title" data-aos="fade-up">Scale and commercialize your AI solutions effortlessly.</p>
+                    </div>
+                    <div class="section-content">
+                        <p class="hscan-body" data-aos="fade-up">With a single integration, your AI solutions can be seamlessly embedded into our PACS, reaching <br>numerous clinical customers effortlessly. Expand your market reach and boost revenue - all <br>without additional administrative hassle.</p>
+                        <a href="https://healthhub.kr/main/?mc_code=1611" class="btn-contact" data-aos="fade-up"><span>Contact Us</span></a>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+    <!-- content -->
+    <!-- footer -->
+    <footer id="footer">
+        <div class="inner">
+            <div class="footer-logo">
+                <img src="./assets/images/footer_logo.svg" alt="HAIHub">
+            </div>
+            <div class="footer-info">
+                <p class="company">Global Medical Imaging AI Directory</p>
+                <ul class="sns">
+                    <li><a href="https://www.instagram.com/healthhub_kr/" target="_blank"><i class="ig"></i></a></li>
+                    <li><a href="https://www.youtube.com/@healthhubinc.3455" target="_blank"><i class="yt"></i></a></li>
+                </ul>
+                <div class="family-site">
+                    <dl>
+                        <dt class="title">Family Site</dt>
+                        <dd><a href="">HealthHub</a></dd>     
+                        <dd><a href="">HPACS</a></dd>     
+                        <dd><a href="">HTeleRad</a></dd>     
+                        <dd><a href="">HScan</a></dd>   
+                        <dd><a href="">HAIHub</a></dd>    
+                        <dd><a href="">Boneage</a></dd>
+                    </dl>
+                </div>
+                <div class="footer-util">
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <address>
+                    <ul>
+                        <li>HealthHub Co., Ltd.</li>
+                        <li><em>Address</em> 14F, 20, Mapo-daero, Mapo-gu, Seoul, Republic of Korea</li>
+                        <li><em>Tel</em> +82 (0)2-511-3601</li>
+                        <li><em>email</em> inquiry@heathhub.kr</li>
+                    </ul>
+                </address>
+                <p class="copyright">Copyright © HealthHub Co., Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration:800
+      });
+
+
+      document.querySelectorAll('.select-wrap label').forEach((label) => {
+        label.addEventListener('click', () => {
+          const targetId = label.htmlFor;
+          if (!targetId) return;
+          const select = document.getElementById(targetId);
+          if (select && typeof select.showPicker === 'function') {
+            select.showPicker();
+          } else if (select) {
+            select.focus();
+            select.click();
+          }
+        });
+      });
+    </script>
+</body>
+</html>
