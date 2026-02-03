@@ -1,0 +1,183 @@
+#solution .inner{
+    padding-top: 5.375rem;
+    padding-bottom: 4.5rem;
+}
+#solution .solution-section{
+    padding:4.6875rem 3.75rem 3.75rem;
+    background: radial-gradient(
+    circle farthest-side at 20% 40%,
+    rgba(0, 62, 244, 0.5) 2%,
+    rgba(0, 10, 41, 0.4) 100%
+    );
+    backdrop-filter: blur(42px);
+    -webkit-backdrop-filter: blur(42px); 
+    box-shadow: inset -5px -5px 250px 0 rgba(0, 12, 141, 0.02);
+    position: relative;
+    border-radius: 10px;
+}
+#solution .solution-section::before{
+    content: '';
+    position: absolute;
+    inset: 1px; 
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+        317deg,
+        rgba(46, 91, 224, 0.8), 
+        rgba(6, 30, 208, 0.6) 
+    );
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    box-sizing: border-box;
+    opacity: 0.6;
+
+}
+#solution .solution-section .section-header{
+    margin-bottom: 4.1875rem;
+}
+#solution .solution-section .section-header h2{
+    display: block;
+    font-size: 2.4375rem;
+    line-height: 1.5em;
+    font-weight: 600;
+    margin-bottom: 3.25rem;
+}
+#solution .solution-section .section-header p{
+    font-size: 1.5rem;
+    line-height: 1.5em;
+}
+#solution .tb-header{
+    margin-bottom: 1.8125rem;
+}
+#solution .tb-header h3{
+    display: flex;
+    align-items: center;
+    gap: 1.1875rem;
+    color:var(--blue);
+    font-size: 1.5rem;
+}
+#solution .tb-header h3 img{}
+#solution .tb-content{}
+#solution .tb-content .tb-scroll{
+    overflow-x: scroll;
+}
+#solution .tb-content table{
+    table-layout: fixed;
+    min-width: 1408px;
+}
+#solution .tb-content table col:nth-child(1){
+    width: 11%;
+}
+#solution .tb-content table col:nth-child(2){
+    width: 17%;
+}
+#solution .tb-content table col:nth-child(3){
+    width: 9%;
+}
+#solution .tb-content table col:nth-child(4){
+    width: 9%;;
+}
+#solution .tb-content table col:nth-child(5){
+    width: 30;
+}
+#solution .tb-content table col:nth-child(6){
+    width: 30%;
+}
+#solution .tb-content table thead th{
+    background-color: #4f96ff;
+    font-size: 1rem;
+    line-height: 1.5em;
+    padding:1rem 0.5rem;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle;
+}
+#solution .tb-content table thead th+th,
+#solution .tb-content table tbody td+td{
+    border-left: 1px solid #0066ff;
+}
+#solution .tb-content table tbody td{
+    background-color: #fff;
+    color:#00003a;
+    padding:0.9375rem 1.125rem;
+    font-size: 0.8125rem;
+    line-height: 1.5em;
+    border-top: 1px solid #0066ff;
+    box-sizing: border-box;
+    vertical-align: middle;
+    word-break: keep-all;
+}
+#solution .tb-content table tbody td a{
+    display: inline-block;
+    color:#00003a;
+    word-break: keep-all;
+}
+#solution .tb-content table tbody td:nth-child(2){
+    background-color: #DDF2FF;
+    color:rgb(0,0,153);
+    font-weight: 600;
+
+}
+#solution .tb-content table tbody td:nth-child(3),
+#solution .tb-content table tbody td:nth-child(4){
+    text-align: center;
+}
+#solution .tb-footer{
+    margin-top: 1.5625rem;
+}
+#solution .tb-footer p{
+    color:var(--hh-light-blue);
+    font-size: 0.9375rem;
+    line-height: 1.75em;
+    font-weight: 400;
+}
+#solution .tb-footer p em{
+    font-weight: 600;
+}
+#solution .tb-footer p a{
+    text-decoration: underline;
+    color:var(--blue);
+}
+
+@media all and (max-width:1280px){
+    #solution .inner{
+        padding:5rem 0;
+    }
+    #solution .solution-section{
+        padding:2rem 0;
+    }
+    #solution .solution-section .section-header{
+        margin-bottom: 3.4rem;
+        padding:0 2rem;
+    }
+    #solution .solution-section .section-header h2{
+        font-size: 2rem;
+        margin-bottom: 1.2em
+    }
+    #solution .solution-section .section-header p{
+        font-size: 1.3rem;
+        word-break: keep-all;
+    }
+    #solution .section-content>*{
+        padding:0 2rem;
+    }
+    #solution .tb-header h3{
+        font-size: 1.3rem;
+        gap: 1rem;
+        word-break: keep-all;
+        line-height: 1.3em;
+    }
+    #solution .tb-header h3 img{
+        width: 44px;
+    }
+    #solution .tb-content{
+        padding:0;
+    }
+    #solution .tb-scroll{
+        padding:0 2rem;
+    }
+}
