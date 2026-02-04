@@ -67,25 +67,22 @@
 }
 #solution .tb-content table{
     table-layout: fixed;
-    min-width: 1408px;
+    min-width: 1000px;
 }
 #solution .tb-content table col:nth-child(1){
-    width: 11%;
+    width: 14%;
 }
 #solution .tb-content table col:nth-child(2){
-    width: 17%;
+    width: 22%;
 }
 #solution .tb-content table col:nth-child(3){
-    width: 9%;
+    width: 13%;
 }
 #solution .tb-content table col:nth-child(4){
-    width: 9%;;
+    width: 13%;
 }
 #solution .tb-content table col:nth-child(5){
-    width: 30;
-}
-#solution .tb-content table col:nth-child(6){
-    width: 30%;
+    width: 33%;
 }
 #solution .tb-content table thead th{
     background-color: #4f96ff;
@@ -96,6 +93,32 @@
     text-align: center;
     vertical-align: middle;
 }
+#solution .tb-content table thead th.sortable{
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    padding-right: 1.5rem;
+}
+#solution .tb-content table thead th.sortable:hover{
+    background-color: #3d85f0;
+}
+#solution .tb-content table thead th.sortable::after{
+    content: '⇅';
+    position: absolute;
+    right: 0.4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    opacity: 0.6;
+}
+#solution .tb-content table thead th.sortable.asc::after{
+    content: '▲';
+    opacity: 1;
+}
+#solution .tb-content table thead th.sortable.desc::after{
+    content: '▼';
+    opacity: 1;
+}
 #solution .tb-content table thead th+th,
 #solution .tb-content table tbody td+td{
     border-left: 1px solid #0066ff;
@@ -103,7 +126,7 @@
 #solution .tb-content table tbody td{
     background-color: #fff;
     color:#00003a;
-    padding:0.9375rem 1.125rem;
+    padding:0.6rem 1.125rem;
     font-size: 0.8125rem;
     line-height: 1.5em;
     border-top: 1px solid #0066ff;
@@ -118,9 +141,16 @@
 }
 #solution .tb-content table tbody td:nth-child(2){
     background-color: #DDF2FF;
-    color:rgb(0,0,153);
     font-weight: 600;
-
+}
+#solution .tb-content table tbody td:nth-child(2) a{
+    color:rgb(0,0,153);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+#solution .tb-content table tbody td:nth-child(2) a:hover{
+    color: #0066ff;
+    text-decoration: underline;
 }
 #solution .tb-content table tbody td:nth-child(3),
 #solution .tb-content table tbody td:nth-child(4){
