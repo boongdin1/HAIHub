@@ -70,19 +70,19 @@
     min-width: 1000px;
 }
 #solution .tb-content table col:nth-child(1){
-    width: 14%;
+    width: 150px;
 }
 #solution .tb-content table col:nth-child(2){
-    width: 22%;
+    width: 220px;
 }
 #solution .tb-content table col:nth-child(3){
-    width: 13%;
+    width: 120px;
 }
 #solution .tb-content table col:nth-child(4){
-    width: 13%;
+    width: 120px;
 }
 #solution .tb-content table col:nth-child(5){
-    width: 33%;
+    width: auto;
 }
 #solution .tb-content table thead th{
     background-color: #4f96ff;
@@ -125,6 +125,7 @@
 }
 #solution .tb-content table tbody td{
     background-color: #fff;
+    word-break: keep-all;
     color:#00003a;
     padding:0.6rem 1.125rem;
     font-size: 0.8125rem;
