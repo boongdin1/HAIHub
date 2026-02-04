@@ -8,6 +8,7 @@
     font-weight: 500;
 }
 .main-content{
+    overflow: hidden;
     position: relative;
     background-color: #000143;
     padding-top: 6.75rem;
