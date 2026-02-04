@@ -1149,60 +1149,37 @@
         duration:800
       });
 
-      document.addEventListener('DOMContentLoaded', function() {
-        const table = document.querySelector('#solution .tb-content table');
-        const headers = table.querySelectorAll('th.sortable');
-        const tbody = table.querySelector('tbody');
+      (function(){
+        var tbl = document.querySelector('#solution .tb-content table');
+        var sortCol = -1, sortDir = 1;
 
-        let currentSort = { col: null, dir: 'asc' };
+        function getType(s){
+          if(!s) return 4;
+          var c = s.charAt(0);
+          return /[a-z]/i.test(c) ? 1 : /\d/.test(c) ? 2 : 3;
+        }
 
-        headers.forEach(header => {
-          header.addEventListener('click', function() {
-            const colIndex = parseInt(this.getAttribute('data-col'));
+        tbl.querySelectorAll('th.sortable').forEach(function(th){
+          th.onclick = function(){
+            var idx = +this.dataset.col;
+            sortDir = (sortCol === idx) ? -sortDir : 1;
+            sortCol = idx;
 
-            if (currentSort.col === colIndex) {
-              currentSort.dir = currentSort.dir === 'asc' ? 'desc' : 'asc';
-            } else {
-              currentSort.col = colIndex;
-              currentSort.dir = 'asc';
-            }
+            tbl.querySelectorAll('th.sortable').forEach(function(h){ h.className = 'sortable'; });
+            this.classList.add(sortDir > 0 ? 'asc' : 'desc');
 
-            headers.forEach(h => h.classList.remove('asc', 'desc'));
-            this.classList.add(currentSort.dir);
-
-            const rows = Array.from(tbody.querySelectorAll('tr'));
-
-            rows.sort((a, b) => {
-              let aVal = a.cells[colIndex].textContent.trim().toLowerCase();
-              let bVal = b.cells[colIndex].textContent.trim().toLowerCase();
-
-              // Custom sort priority: letters > numbers > special chars > empty
-              function getSortPriority(str) {
-                if (!str || str === '') return 4; // empty last
-                const firstChar = str.charAt(0);
-                if (/[a-z]/i.test(firstChar)) return 1; // letters first
-                if (/[0-9]/.test(firstChar)) return 2; // numbers second
-                return 3; // special characters third
-              }
-
-              const aPriority = getSortPriority(aVal);
-              const bPriority = getSortPriority(bVal);
-
-              // Compare by priority first
-              if (aPriority !== bPriority) {
-                return currentSort.dir === 'asc' ? aPriority - bPriority : bPriority - aPriority;
-              }
-
-              // Same priority, compare alphabetically
-              if (aVal < bVal) return currentSort.dir === 'asc' ? -1 : 1;
-              if (aVal > bVal) return currentSort.dir === 'asc' ? 1 : -1;
-              return 0;
+            var rows = [].slice.call(tbl.tBodies[0].rows);
+            rows.sort(function(a,b){
+              var x = a.cells[idx].textContent.trim().toLowerCase();
+              var y = b.cells[idx].textContent.trim().toLowerCase();
+              var p = getType(x) - getType(y);
+              if(p) return p * sortDir;
+              return (x < y ? -1 : x > y ? 1 : 0) * sortDir;
             });
-
-            rows.forEach(row => tbody.appendChild(row));
-          });
+            rows.forEach(function(r){ tbl.tBodies[0].appendChild(r); });
+          };
         });
-      });
+      })();
     </script>
 </body>
 </html>
